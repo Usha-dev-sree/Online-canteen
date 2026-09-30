@@ -12,13 +12,22 @@ connectDB();
 const app = express();
 
 // --------------- Middleware ---------------
+const allowedOrigins = [
+  /^http:\/\/localhost:\d+$/,                     // any localhost port (dev)
+  process.env.FRONTEND_URL,                        // deployed frontend URL (set in Render env vars)
+].filter(Boolean);
+
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow any localhost port (5173, 5174, etc.) for dev, plus no-origin (Postman, curl)
-    if (!origin || /^http:\/\/localhost:\d+$/.test(origin)) {
+    // Allow no-origin requests (Postman, curl, mobile apps)
+    if (!origin) return callback(null, true);
+    const allowed = allowedOrigins.some(o =>
+      o instanceof RegExp ? o.test(origin) : o === origin
+    );
+    if (allowed) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(new Error(`CORS: origin ${origin} not allowed`));
     }
   },
   credentials: true,
