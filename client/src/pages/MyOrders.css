@@ -1,0 +1,81 @@
+.orders-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.orders-header h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+.orders-header p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(26, 26, 46, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.refresh-btn:hover {
+  color: #f97316;
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+.refresh-btn .spin {
+  animation: spin 0.8s linear infinite;
+}
+
+.orders-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-orders {
+  text-align: center;
+  background: rgba(26, 26, 46, 0.4);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 60px 20px;
+}
+
+.empty-orders-icon {
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 14px;
+}
+
+.empty-orders h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+.empty-orders p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.88rem;
+  margin: 0;
+}

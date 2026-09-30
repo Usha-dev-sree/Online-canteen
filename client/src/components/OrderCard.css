@@ -1,0 +1,207 @@
+.order-card {
+  background: rgba(26, 26, 46, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.order-header-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.payment-badge.paid {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.order-id {
+  font-weight: 800;
+  color: #f3f4f6;
+  font-size: 0.95rem;
+  margin-right: 12px;
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+.order-date {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.order-status {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.order-user {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.order-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-item-name {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.order-item-price {
+  font-size: 0.88rem;
+  color: #f97316;
+  font-weight: 600;
+}
+
+/* 6-DIGIT PICKUP CODE BANNER */
+.pickup-code-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(26, 26, 46, 0.9));
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin: 14px 0;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.1);
+}
+
+.pickup-code-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.pickup-code-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #fbbf24;
+  letter-spacing: 0.5px;
+}
+
+.pickup-code-value {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  font-family: ui-monospace, Consolas, monospace;
+  letter-spacing: 2px;
+}
+
+.pickup-hint {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-style: italic;
+  max-width: 140px;
+  text-align: right;
+}
+
+/* Pending admin banner */
+.pending-admin-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  margin: 12px 0;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.order-total {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #f3f4f6;
+}
+
+.order-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.status-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.status-btn.confirm  { background: linear-gradient(135deg, #3b82f6, #2563eb); color: #fff; }
+.status-btn.prepare  { background: rgba(167, 139, 250, 0.2); color: #a78bfa; }
+.status-btn.ready    { background: rgba(52, 211, 153, 0.2);  color: #34d399; }
+.status-btn.deliver  { background: rgba(16, 185, 129, 0.2);  color: #10b981; }
+.status-btn.cancel   { background: rgba(239, 68, 68, 0.15);  color: #ef4444; }
+
+.status-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.2);
+}
+
+.order-notes {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
