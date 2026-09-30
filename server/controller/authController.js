@@ -11,7 +11,7 @@ const generateToken = (id) => {
 // @access  Public
 exports.register = async (req, res) => {
   try {
-    const { name, email, password, phone } = req.body;
+    const { name, email, password, phone, role } = req.body;
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });
@@ -19,8 +19,11 @@ exports.register = async (req, res) => {
       return res.status(400).json({ message: 'User with this email already exists' });
     }
 
+    // Allow registering as admin or student
+    const validRole = role === 'admin' ? 'admin' : 'student';
+
     // Create user
-    const user = await User.create({ name, email, password, phone });
+    const user = await User.create({ name, email, password, phone, role: validRole });
 
     res.status(201).json({
       _id: user._id,

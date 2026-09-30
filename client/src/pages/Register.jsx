@@ -13,6 +13,7 @@ const Register = () => {
     email: '',
     password: '',
     phone: '',
+    role: 'student',
   });
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
@@ -65,6 +66,32 @@ const Register = () => {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
               />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="reg-role">Register As</label>
+            <div className="input-wrapper">
+              <FiUser className="input-icon" />
+              <select
+                id="reg-role"
+                value={formData.role}
+                onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                className="select-input"
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1rem 0.75rem 2.75rem',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '0.5rem',
+                  backgroundColor: '#f8fafc',
+                  fontSize: '0.95rem',
+                  outline: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                <option value="student">Student / Customer</option>
+                <option value="admin">Canteen Admin</option>
+              </select>
             </div>
           </div>
 
